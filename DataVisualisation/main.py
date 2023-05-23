@@ -8,7 +8,14 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Set page title
 st.title("CSV File Plotter")
-
+hide_ele="""
+        <style>
+        #Mainmenu {visibility:hidden;}
+        footer {visibility:hidden;}
+        header {visibility:hidden;}
+        </style>
+        """
+st.markdown(hide_ele,unsafe_allow_html=True)
 # File upload
 uploaded_file = st.file_uploader("Upload a CSV file", type="csv")
 
